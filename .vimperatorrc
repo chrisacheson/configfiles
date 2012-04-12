@@ -1,0 +1,7 @@
+set complete=lf
+set defsearch=
+set focuscontent
+set followhints=1
+set hlsearch
+
+set "titlestring=Mozilla Firefox"
