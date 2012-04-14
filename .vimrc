@@ -1,21 +1,16 @@
+" Explicitly disable loading of rc files found in the directory of the file
+" being edited. Having this enabled would be a security risk.
+set noexrc
+
+" Enable syntax highlighting
 syntax on
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
+" Restore the last cursor position when reopening a file
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Uncomment the following to have Vim load indentation rules according to the
-" detected filetype. Per default Debian Vim only load filetype specific
-" plugins.
-if has("autocmd")
-  filetype indent on
-endif
+" Load filetype-specific indentation rules
+filetype indent on
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
@@ -45,23 +40,32 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Get the path './.vim/', relative to this script. Symlinks make this
+" complicated.
+let s:dotvimdir = fnameescape(fnamemodify(resolve(expand('<sfile>')), ':h').'/.vim/')
+
 " For gvim
 if has('gui_running')
-	colorscheme torte
-	set guioptions=	" Disable all GUI elements
+    colorscheme desert
+    " Don't use bold text
+    execute 'source' s:dotvimdir.'highlight_remove_attr.vim'
+    call Highlight_remove_attr('bold')
 
-	if has ('unix')
-		set guifont=ProFont\ 8
-		set lines=80
-	elseif has('win32')
-		set guifont=ProFontWindows:h8:cANSI
-		winpos 989 0
-		set lines=68
-	else
-		set lines=40
-	endif
+    " Disable all GUI elements
+    set guioptions=
 
-	set columns=100
+    if has ('unix')
+        set guifont=ProFont\ 8
+        set lines=80
+    elseif has('win32')
+        set guifont=ProFontWindows:h8:cANSI
+        winpos 989 0
+        set lines=68
+    else
+        set lines=40
+    endif
+
+    set columns=100
 endif
 
 " Use tabs for buffers
@@ -75,3 +79,6 @@ set hlsearch
 
 " When rewrapping text, don't use double spaces after periods
 set nojoinspaces
+
+" Ignore whitespace in vimdiff
+set diffopt+=iwhite
