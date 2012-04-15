@@ -66,6 +66,11 @@ if has('gui_running')
     endif
 
     set columns=100
+else
+    " If we're not in GUI mode, use the desert256 color scheme. This will look
+    " best if your terminal is properly configured for 256 colors, but will
+    " gracefully degrade otherwise.
+    execute 'source' s:dotvimdir.'desert256.vim'
 endif
 
 " Use tabs for buffers
@@ -82,3 +87,11 @@ set nojoinspaces
 
 " Ignore whitespace in vimdiff
 set diffopt+=iwhite
+
+" Highlight characters past column 100
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+match OverLength /\%>100v.\+/
+
+" Allow backspace and delete to remove autoindent, newlines, and characters
+" before start of insert
+set backspace=indent,eol,start
