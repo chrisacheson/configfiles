@@ -95,3 +95,10 @@ match OverLength /\%>100v.\+/
 " Allow backspace and delete to remove autoindent, newlines, and characters
 " before start of insert
 set backspace=indent,eol,start
+
+" Make command-line and insert-mode completion behave similar to bash. For
+" command-line completion, fall back to vim's default behavior if we hit tab a
+" second time, and display a menu of completion items.
+set wildmode=list:longest,full
+set wildmenu
+set completeopt=menu,longest,preview
