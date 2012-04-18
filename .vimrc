@@ -95,3 +95,6 @@ match OverLength /\%>100v.\+/
 " Allow backspace and delete to remove autoindent, newlines, and characters
 " before start of insert
 set backspace=indent,eol,start
+
+" Make the file explorer open files in a new tab
+let g:netrw_browse_split=3
