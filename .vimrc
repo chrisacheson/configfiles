@@ -98,3 +98,10 @@ set backspace=indent,eol,start
 
 " Make the file explorer open files in a new tab
 let g:netrw_browse_split=3
+
+" Make command-line and insert-mode completion behave similar to bash. For
+" command-line completion, fall back to vim's default behavior if we hit tab a
+" second time, and display a menu of completion items.
+set wildmode=list:longest,full
+set wildmenu
+set completeopt=menu,longest,preview
