@@ -4,4 +4,10 @@ set focuscontent
 set followhints=1
 set hlsearch
 
+" Firefox already shows link urls on mouseover
+set showstatuslinks=0
+
+" Show numbers on tabs for easier switching
+set tabnumbers
+
 set "titlestring=Mozilla Firefox"
