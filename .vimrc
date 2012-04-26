@@ -90,7 +90,7 @@ set diffopt+=iwhite
 
 " Highlight characters past column 100
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
-match OverLength /\%>100v.\+/
+autocmd BufWinEnter * match OverLength /\%>100v.\+/
 
 " Allow backspace and delete to remove autoindent, newlines, and characters
 " before start of insert
