@@ -2,6 +2,9 @@
 " being edited. Having this enabled would be a security risk.
 set noexrc
 
+" Disable modelines, also a security risk
+set nomodeline
+
 " Enable syntax highlighting
 syntax on
 
@@ -61,6 +64,10 @@ if has('gui_running')
         set guifont=ProFontWindows:h8:cANSI
         winpos 989 0
         set lines=68
+
+        if v:servername ==? 'VIMSTUDIO'
+            execute 'source' s:dotvimdir.'visualstudioinvoke.vim'
+        endif
     else
         set lines=40
     endif
