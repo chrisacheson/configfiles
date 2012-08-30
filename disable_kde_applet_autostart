@@ -1,0 +1,6 @@
+# Create a symlink to this file to stop KDE applets from autostarting
+# Examples:
+#   ln -s ~/configfiles/disable_kde_applet_autostart ~/.config/autostart/akonaditray.desktop
+#   ln -s ~/configfiles/disable_kde_applet_autostart ~/.config/autostart/printer-applet.desktop
+[Desktop Entry]
+Hidden=true
