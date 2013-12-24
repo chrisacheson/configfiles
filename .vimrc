@@ -90,6 +90,9 @@ if has('gui_running')
         if v:servername ==? 'VIMSTUDIO'
             execute 'source' s:dotvimdir.'visualstudioinvoke.vim'
         endif
+
+        " Macro to fill in timesheet calculations
+        let @a='0w"1yt	j0w"2yt	k0wf	a=2-1j'
     else
         set columns=100
         set lines=40
