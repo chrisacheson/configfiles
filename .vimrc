@@ -48,6 +48,9 @@ set smartindent
 " Just use normal tabs when not editing code
 autocmd BufRead,BufNewFile *.txt setlocal noexpandtab softtabstop=0 shiftwidth=8
 
+" Treat arduino files as C++
+autocmd BufRead,BufNewFile *.ino set filetype=cpp
+
 " smartindent is annoying when working in python
 au! FileType python setl nosmartindent
 
