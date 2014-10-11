@@ -4,6 +4,9 @@ set focuscontent
 set followhints=1
 set hlsearch
 
+" Need this in Firefox v29 to keep the navigation bar from appearing
+set gui=nonavigation
+
 " Firefox already shows link urls on mouseover
 set showstatuslinks=0
 
