@@ -81,7 +81,7 @@ if has('gui_running')
     if has ('unix')
         set guifont=ProFont\ 8
         set columns=197
-        set lines=102
+        set lines=75
         " Open NERDTree on startup
         autocmd vimenter * NERDTree
     elseif has('win32')
