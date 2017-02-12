@@ -1,0 +1,5 @@
+# Start with system default configuration
+$include /etc/inputrc
+
+# Show current editing mode in prompt
+set show-mode-in-prompt on
