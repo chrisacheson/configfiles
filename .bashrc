@@ -118,6 +118,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Use vi mode for command line editing
-set -o vi
