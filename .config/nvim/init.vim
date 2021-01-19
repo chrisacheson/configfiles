@@ -38,3 +38,12 @@ set completeopt=menu,longest,preview
 " Use 24-bit color when running in a terminal
 set termguicolors
 colorscheme desert
+
+" Force plugins to load now so that we can configure them
+packloadall
+
+" Run Neomake when saving
+call neomake#configure#automake('w')
+
+" Only use flake8 for python linting
+let g:neomake_python_enabled_makers = ['flake8']
