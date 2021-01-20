@@ -45,5 +45,5 @@ packloadall
 " Run Neomake when saving
 call neomake#configure#automake('w')
 
-" Only use flake8 for python linting
-let g:neomake_python_enabled_makers = ['flake8']
+" Use flake8 and mypy for python linting
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']

@@ -1,0 +1,2 @@
+[mypy]
+python_executable = ${VIRTUAL_ENV}/bin/python
