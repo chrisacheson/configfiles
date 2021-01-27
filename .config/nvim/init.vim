@@ -37,7 +37,7 @@ set completeopt=menu,longest,preview
 
 " Use 24-bit color when running in a terminal
 set termguicolors
-colorscheme desert
+colorscheme cacheson
 
 " Force plugins to load now so that we can configure them
 packloadall
