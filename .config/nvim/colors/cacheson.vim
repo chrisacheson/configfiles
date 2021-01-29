@@ -70,6 +70,8 @@ hi Ignore	guifg=grey40
 "hi Error
 hi Todo		guifg=orangered guibg=yellow2
 
+hi User1        guibg=indianred guifg=black
+
 " color terminal definitions
 hi SpecialKey	ctermfg=darkgreen
 hi NonText	cterm=bold ctermfg=darkblue

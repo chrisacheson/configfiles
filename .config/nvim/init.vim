@@ -39,6 +39,9 @@ set completeopt=menu,longest,preview
 set termguicolors
 colorscheme cacheson
 
+" Highlight modified/help/readonly flags on statusline
+set statusline=%<%f\ %1*%h%m%r%*%=%-14.(%l,%c%V%)\ %P
+
 " Force plugins to load now so that we can configure them
 packloadall
 
