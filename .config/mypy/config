@@ -1,2 +1,3 @@
 [mypy]
 python_executable = ${VIRTUAL_ENV}/bin/python
+no_implicit_optional = True
