@@ -120,3 +120,7 @@ fi
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.venvs
 source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+
+# Use neovim for view and vimdiff
+alias view='nvim -R'
+alias vimdiff='nvim -d'
