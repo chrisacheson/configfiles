@@ -124,3 +124,9 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 # Use neovim for view and vimdiff
 alias view='nvim -R'
 alias vimdiff='nvim -d'
+
+# Make gvim stfu
+alias gvim='gvim 2> /dev/null'
+
+# Nim path
+export PATH=/home/cacheson/.nimble/bin:$PATH

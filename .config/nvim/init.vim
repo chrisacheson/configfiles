@@ -49,4 +49,6 @@ packloadall
 call neomake#configure#automake('w')
 
 " Use flake8 and mypy for python linting
-let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+"let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+" Just flake8 for now
+let g:neomake_python_enabled_makers = ['flake8']

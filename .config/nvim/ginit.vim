@@ -1,2 +1,2 @@
 " Use ProFont in GUI mode
-GuiFont ProFont:h8
+GuiFont Hack:h9
